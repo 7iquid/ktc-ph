@@ -32,6 +32,14 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'rest_framework_xml.renderers.XMLRenderer',
+#         'rest_framework.renderers.JSONRenderer',
+#         'rest_framework.renderers.BrowsableAPIRenderer',
+#     ),
+# }
+
 # Application definition
 
 INSTALLED_APPS = [
