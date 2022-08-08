@@ -29,8 +29,7 @@ SECRET_KEY = 'django-insecure-4%5=hdooeuuta-ftcekk=uar^bxm%x2yvg&69#4il4_92_u&(z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['ktc-ph-ui.herokuapp.com']
 
 # REST_FRAMEWORK = {
 #     'DEFAULT_RENDERER_CLASSES': (
