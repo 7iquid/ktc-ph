@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'backendapi.apps.BackendapiConfig',
     'corsheaders',
+    'DtcModels',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
