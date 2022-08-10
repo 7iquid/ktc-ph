@@ -6,7 +6,7 @@ from DtcModels.models import Photo
 from .serializer import PhotoSerializer
 # Create your views here.
 
-@api_view(['GET'])
+@api_view(['GET','POST'])
 def getData(request):
 	item = Photo.objects.all()
 	serializer = PhotoSerializer(item, many=True)
