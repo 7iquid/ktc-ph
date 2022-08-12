@@ -111,13 +111,13 @@ WSGI_APPLICATION = 'MainApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        "name":"ktc-ph",
-        'CLIENT': {
-            "host":"mongodb+srv://7iquid:2222222@cluster0.tknli.mongodb.net/?retryWrites=true&w=majority"
-            ,
-            "authMechanism":"SCRAM-SHA-1" #For atlas cloud db
-        }
+        #'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'BV3PCCIsY23DQKE378Mu',
+        'HOST': 'containers-us-west-41.railway.app',
+        'PORT': '7995',
     }
 }
 
@@ -179,7 +179,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,
     'UPDATE_LAST_LOGIN': False,
