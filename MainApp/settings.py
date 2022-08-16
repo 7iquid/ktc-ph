@@ -25,8 +25,8 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL ='/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL ='/media/'
 
 
 
@@ -180,11 +180,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # for dropbox
-DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-DROPBOX_ACCESS_TOKEN = 'sl.BNQ65jYH06EmIPbm23F8OSOyH7iq3Tea440idhqT4UqOBszQWR60B3WAxGbBGmQA-34qgDacTgvMxTrbnzAu1RRunb1KwiQdbEdUHVwBIff6V9ipZDT3xWhptBDsOx401ZDzkms'
-DROPBOX_ROOT_FOLDER = '/Public'
-
-
+DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_ACCESS_TOKEN = 'sl.BNf9X8xIdTRou1Q9eb3-cWa0x_eurnNG1ynJXWgEaBmpWdEdfhd2R_WU0LRbTibEOfi2MjF9-N2aeq_l_V4r171zVRTWCtfDZ-YlqRCuKe0MtOS8lrtqGCe2vPOcm77DF4gHJhd1Lu-Y'
+DROPBOX_OAUTH2_TOKEN ='sl.BNf9X8xIdTRou1Q9eb3-cWa0x_eurnNG1ynJXWgEaBmpWdEdfhd2R_WU0LRbTibEOfi2MjF9-N2aeq_l_V4r171zVRTWCtfDZ-YlqRCuKe0MtOS8lrtqGCe2vPOcm77DF4gHJhd1Lu-Y'
+# DROPBOX_ROOT_FOLDER = '/DTC/newsfeeds/main'
+DROPBOX_OAUTH2_REFRESH_TOKEN = 'YLKC9hbw0rMAAAAAAAABS-pVaFKTe_NXLgq9144xWvs'
+DROPBOX_APP_KEY = 'w5lbt5pc42jrm20'
+DROPBOX_APP_SECRET  = 'bhdxtu2vm0sqrgn'
 
 
 

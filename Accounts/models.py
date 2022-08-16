@@ -1,7 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django_dropbox_storage.storage import DropboxStorage
+from django.conf import settings
 
+import dropbox
 
 DROPBOX_STORAGE = DropboxStorage()
 
@@ -18,3 +20,5 @@ class UserThumbNail(models.Model):
             "date": self.date.strftime("%a-%d-%b-%Y , %H:%M:%S %p"),
             "photo": self.photo.url
         }
+
+

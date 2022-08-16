@@ -23,6 +23,9 @@ djano command
 ## python manage.py shell
 ## form api.models import*
 
+//DropBox
+## python manage.py get_dropbox_token [--settings=test_settings]
+
 
 // model migrations
 ## python manage.py makemigrations //staging
