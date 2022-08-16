@@ -1,8 +1,4 @@
 from django.shortcuts import render
-from django.contrib.auth.models import User
-from rest_framework.renderers import JSONRenderer
-from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
@@ -51,6 +47,13 @@ class  MainApiView(APIView):
 		}
 		# serializer = PhotoSerializer(item, many=True)
 		return Response({'name':'tamina'})
+
+
+@api_view(['GET','POST'])
+def getData(request):
+	item = Photo.objects.all()
+	serializer = PhotoSerializer(item, many=True)
+	return Response(serializer.data) 
 
 
 @api_view(['POST'])

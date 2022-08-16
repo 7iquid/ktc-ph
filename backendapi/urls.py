@@ -19,8 +19,7 @@ router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 
 urlpatterns = [
-	path('', views.MainApiView.as_view()),
-     # path('', MachineStatus.as_view()),
+	path('', views.getData),
 	path('router/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('add/', views.addItem),
