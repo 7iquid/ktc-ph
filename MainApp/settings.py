@@ -25,8 +25,8 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# MEDIA_URL ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 
 
@@ -38,7 +38,6 @@ SECRET_KEY = 'django-insecure-4%5=hdooeuuta-ftcekk=uar^bxm%x2yvg&69#4il4_92_u&(z
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 
 ALLOWED_HOSTS = ['ktc-ph-ui.herokuapp.com','127.0.0.1' ,'localhost' ,'localhost:3000']
 # ALLOWED_HOSTS = ['*']
@@ -55,7 +54,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -70,14 +68,18 @@ INSTALLED_APPS = [
     'backendapi.apps.BackendapiConfig',
     'django_dropbox_storage',
     'corsheaders',
+    'django_filters',
     'Accounts',
     'DtcModels',
+    # 'storages',
+
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -182,14 +184,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # for dropbox
-DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
-# DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-DROPBOX_ACCESS_TOKEN = 'sl.BNf9X8xIdTRou1Q9eb3-cWa0x_eurnNG1ynJXWgEaBmpWdEdfhd2R_WU0LRbTibEOfi2MjF9-N2aeq_l_V4r171zVRTWCtfDZ-YlqRCuKe0MtOS8lrtqGCe2vPOcm77DF4gHJhd1Lu-Y'
-DROPBOX_OAUTH2_TOKEN ='sl.BNf9X8xIdTRou1Q9eb3-cWa0x_eurnNG1ynJXWgEaBmpWdEdfhd2R_WU0LRbTibEOfi2MjF9-N2aeq_l_V4r171zVRTWCtfDZ-YlqRCuKe0MtOS8lrtqGCe2vPOcm77DF4gHJhd1Lu-Y'
-# DROPBOX_ROOT_FOLDER = '/DTC/newsfeeds/main'
-DROPBOX_OAUTH2_REFRESH_TOKEN = 'YLKC9hbw0rMAAAAAAAABS-pVaFKTe_NXLgq9144xWvs'
+# DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
+# DROPBOX_ACCESS_TOKEN = 'sl.BNdWsTb3MBxnwtwQgHQ1Hgi4SO6X14DbBzm9KgULUh81SBXhGXD7mxKWqUDDqDoKmd65IeHXPG-FNNcbBZpDvEUTYLZOiGHA8-nz1L8tL5lVJqaQ0Z5gFID5MHqnPbZBekBiMKYuNP-y'
+DROPBOX_ACCESS_TOKEN = 'sl.BNe--2nucMd3cT866KSoOd8rzoLWYCsI0h6rrbz7giNWsw7cp7fGqmG9mBTY-3u2xv8t737mSTShJNz9DOiJ0XaXP2eBV814qsSbmwfCVvAuhANpQHbQzJ9IBuqiR9Kypx8vT41mvbs_'
+# # DROPBOX_ROOT_FOLDER = '/DTC'
+# DROPBOX_CONSUMER_KEY = 'w5lbt5pc42jrm20'
+# DROPBOX_CONSUMER_SECRET ='bhdxtu2vm0sqrgn'
+
+# DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN  = 'sl.BNdWsTb3MBxnwtwQgHQ1Hgi4SO6X14DbBzm9KgULUh81SBXhGXD7mxKWqUDDqDoKmd65IeHXPG-FNNcbBZpDvEUTYLZOiGHA8-nz1L8tL5lVJqaQ0Z5gFID5MHqnPbZBekBiMKYuNP-y'
+# DROPBOX_ACCESS_TOKEN = 'sl.BNe--2nucMd3cT866KSoOd8rzoLWYCsI0h6rrbz7giNWsw7cp7fGqmG9mBTY-3u2xv8t737mSTShJNz9DOiJ0XaXP2eBV814qsSbmwfCVvAuhANpQHbQzJ9IBuqiR9Kypx8vT41mvbs_'
+# DROPBOX_ROOT_FOLDER = '/DTC'
 DROPBOX_APP_KEY = 'w5lbt5pc42jrm20'
-DROPBOX_APP_SECRET  = 'bhdxtu2vm0sqrgn'
+DROPBOX_APP_SECRET ='bhdxtu2vm0sqrgn'
+DROPBOX_ROOT_PATH = 'media'
+
 
 
 
