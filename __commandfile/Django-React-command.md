@@ -3,7 +3,8 @@
 python app.py
 
 ## python -m venv venv
-## venv\Scripts\activate
+## 		cmd 	venv\Scripts\activate
+## 		bash 	alias activate=". venv/Scripts/activate"
 ## pip install -r requirements.txt
 ## http://127.0.0.1:8000/
 ## pip freeze

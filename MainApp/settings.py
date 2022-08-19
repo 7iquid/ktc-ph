@@ -25,13 +25,29 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DROPBOX_ROOT_PATH  = 'media'
 
-
+# DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN  = 'sl.BNkQw8cnCQrbNNskzG7ivnXid7zjzhBFN2fEmjUDlkm5gyKrT1MZ5ZwDYabZceizdpraQdthgcU5KFi3AZNFebv0LxN2LQnzEAG5PEZY8tXftv4FE4p1bh_xrg1coDzoeigZqOwe'
+DROPBOX_ACCESS_TOKEN = DROPBOX_OAUTH2_TOKEN
+# # DROPBOX_ROOT_FOLDER = '/DTC'
+DROPBOX_APP_KEY = 'w5lbt5pc42jrm20'
+DROPBOX_APP_SECRET ='bhdxtu2vm0sqrgn'
+# DROPBOX_ROOT_PATH = 'media'
+DROPBOX_OAUTH2_REFRESH_TOKEN = '7Trh4gb4k8MAAAAAAAAAAbCxLpgIvuq4rzIQKjX2fLDewbJCmCxsCuMLHSdobM7_'
+AUTHORIZATION_CODE ='YLKC9hbw0rMAAAAAAAAB4hl2s9PqnqbguUvhFhjjUwk'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+
+
+
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-4%5=hdooeuuta-ftcekk=uar^bxm%x2yvg&69#4il4_92_u&(z'
@@ -66,12 +82,14 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'backendapi.apps.BackendapiConfig',
-    'django_dropbox_storage',
+    
     'corsheaders',
-    'django_filters',
+    # 'django_filters',
     'Accounts',
     'DtcModels',
-    # 'storages',
+
+    'storages',
+    # 'django_dropbox_storage',
 
 ]
 
@@ -134,6 +152,7 @@ DATABASES = {
         'PORT': '7995',
     }
 }
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # Password validation
@@ -174,7 +193,7 @@ USE_TZ = True
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
@@ -185,21 +204,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # for dropbox
 # DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
+
 # DROPBOX_ACCESS_TOKEN = 'sl.BNdWsTb3MBxnwtwQgHQ1Hgi4SO6X14DbBzm9KgULUh81SBXhGXD7mxKWqUDDqDoKmd65IeHXPG-FNNcbBZpDvEUTYLZOiGHA8-nz1L8tL5lVJqaQ0Z5gFID5MHqnPbZBekBiMKYuNP-y'
-DROPBOX_ACCESS_TOKEN = 'sl.BNe--2nucMd3cT866KSoOd8rzoLWYCsI0h6rrbz7giNWsw7cp7fGqmG9mBTY-3u2xv8t737mSTShJNz9DOiJ0XaXP2eBV814qsSbmwfCVvAuhANpQHbQzJ9IBuqiR9Kypx8vT41mvbs_'
-# # DROPBOX_ROOT_FOLDER = '/DTC'
-# DROPBOX_CONSUMER_KEY = 'w5lbt5pc42jrm20'
-# DROPBOX_CONSUMER_SECRET ='bhdxtu2vm0sqrgn'
-
-# DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-DROPBOX_OAUTH2_TOKEN  = 'sl.BNdWsTb3MBxnwtwQgHQ1Hgi4SO6X14DbBzm9KgULUh81SBXhGXD7mxKWqUDDqDoKmd65IeHXPG-FNNcbBZpDvEUTYLZOiGHA8-nz1L8tL5lVJqaQ0Z5gFID5MHqnPbZBekBiMKYuNP-y'
 # DROPBOX_ACCESS_TOKEN = 'sl.BNe--2nucMd3cT866KSoOd8rzoLWYCsI0h6rrbz7giNWsw7cp7fGqmG9mBTY-3u2xv8t737mSTShJNz9DOiJ0XaXP2eBV814qsSbmwfCVvAuhANpQHbQzJ9IBuqiR9Kypx8vT41mvbs_'
-# DROPBOX_ROOT_FOLDER = '/DTC'
-DROPBOX_APP_KEY = 'w5lbt5pc42jrm20'
-DROPBOX_APP_SECRET ='bhdxtu2vm0sqrgn'
-DROPBOX_ROOT_PATH = 'media'
+# # # DROPBOX_ROOT_FOLDER = '/DTC'
+# # DROPBOX_CONSUMER_KEY = 'w5lbt5pc42jrm20'
+# # DROPBOX_CONSUMER_SECRET ='bhdxtu2vm0sqrgn'
 
+# # DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 
 
 

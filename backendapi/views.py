@@ -5,7 +5,7 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-
+from rest_framework.views import APIView
 import requests
 from DtcModels.models import Photo
 from .serializer import PhotoSerializer
