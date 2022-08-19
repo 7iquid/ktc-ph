@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 class UserThumbNail(models.Model):
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
     # say = models.CharField(null = True, max_length=250 )
-    date = models.DateTimeField(auto_now_add=True)
+    # date = models.DateTimeField(auto_now_add=True)
     photo = models.ImageField(upload_to='photo' , null = True,)
     # image = models.FileField()
     # image_data = models.BinaryField(null=True)
