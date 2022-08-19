@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 # TOKEN = settings.DROPBOX_OAUTH2_TOKEN
 # dbx = dropbox.Dropbox(settings.DROPBOX_OAUTH2_TOKEN)
 class UserThumbNail(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
     # say = models.CharField(null = True, max_length=250 )
     date = models.DateTimeField(auto_now_add=True)
     photo = models.ImageField(upload_to='photo' , null = True,)
