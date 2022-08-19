@@ -13,7 +13,7 @@ class UserThumbNail(models.Model):
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
     # say = models.CharField(null = True, max_length=250 )
     # date = models.DateTimeField(auto_now_add=True)
-    photo = models.ImageField(upload_to='photo' , null = True,)
+    photo = models.ImageField(upload_to='photo' , blank=True, null=True)
     # image = models.FileField()
     # image_data = models.BinaryField(null=True)
     # player_photo = models.ImageField(upload_to="player_photos", storage=DatabaseStorage() )
