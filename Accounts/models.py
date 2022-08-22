@@ -17,7 +17,7 @@ class UserThumbNail(models.Model):
     # image = models.FileField()
     # image_data = models.BinaryField(null=True)
     # player_photo = models.ImageField(upload_to="player_photos", storage=DatabaseStorage() )
-    # photo = models.FileField( upload_to='photos',)
+    photo = models.FileField( upload_to='photos', null = True)
 # class ImageFile(models.Model):
 #     image = models.FileField()
 #     image_data = models.BinaryField(null=True)
