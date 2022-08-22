@@ -25,10 +25,8 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
-
-
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 
 
@@ -64,7 +62,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticf1iles',
+    'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
@@ -134,9 +132,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'NTbQxOZROYLVeVGO1mw7',
-        'HOST': 'containers-us-west-36.railway.app',
-        'PORT': '7005',
+        'PASSWORD': 'MY2IjKFJ8F8oxBSyXbyu',
+        'HOST': 'containers-us-west-65.railway.app',
+        'PORT': '6537',
     }
 }
 
@@ -198,6 +196,11 @@ DROPBOX_APP_SECRET ='bhdxtu2vm0sqrgn'
 DROPBOX_OAUTH2_REFRESH_TOKEN = '7Trh4gb4k8MAAAAAAAAAAbCxLpgIvuq4rzIQKjX2fLDewbJCmCxsCuMLHSdobM7_'
 AUTHORIZATION_CODE ='YLKC9hbw0rMAAAAAAAAB4hl2s9PqnqbguUvhFhjjUwk'
 # to do if refresh token expire . automate it
+
+
+
+
+
 
 
 

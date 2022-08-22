@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import UserThumbNail
+from .models import DtcAccount
 
-admin.site.register(UserThumbNail)
+admin.site.register(DtcAccount)
 # admin.site.register(Console)
