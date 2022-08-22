@@ -1,0 +1,1 @@
+alias activate=". venv/Scripts/activate"
