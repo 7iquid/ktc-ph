@@ -147,9 +147,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'BV3PCCIsY23DQKE378Mu',
-        'HOST': 'containers-us-west-41.railway.app',
-        'PORT': '7995',
+        'PASSWORD': 'NTbQxOZROYLVeVGO1mw7',
+        'HOST': 'containers-us-west-36.railway.app',
+        'PORT': '7005',
     }
 }
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
