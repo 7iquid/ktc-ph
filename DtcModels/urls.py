@@ -1,5 +1,5 @@
 from django.urls import path, include
-from . import views
+from .views import get_name, home
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 
@@ -16,6 +16,8 @@ router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 
 urlpatterns = [
-	path('', views.get_name),
+	path('/sample', get_name),
+    path('<pk>', home),
+    path('', home),
 ]
 

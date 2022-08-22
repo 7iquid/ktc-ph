@@ -22,3 +22,6 @@ def get_name(request):
 
     # return render(request, 'formstemplateko.html', {'form': form})
     return HttpResponse( form)
+
+def home(request, pk='POGI!'):
+    return render (request=request, template_name="formstemplateko.html", context={"pk":pk})

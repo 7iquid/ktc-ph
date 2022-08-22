@@ -56,7 +56,7 @@ SECRET_KEY = 'django-insecure-4%5=hdooeuuta-ftcekk=uar^bxm%x2yvg&69#4il4_92_u&(z
 DEBUG = True
 
 ALLOWED_HOSTS = ['ktc-ph-ui.herokuapp.com','127.0.0.1' ,'localhost' ,'localhost:3000','ktc-ph-api.herokuapp.com']
-# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['']
 
 REST_FRAMEWORK = {
 'DEFAULT_AUTHENTICATION_CLASSES': [

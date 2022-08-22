@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Photo(models.Model):
 	_id = models.AutoField(null=False, primary_key= True)
