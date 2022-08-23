@@ -20,6 +20,7 @@ from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_URL = '/static/'
@@ -137,6 +138,22 @@ DATABASES = {
         'PORT': '6537',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'DTC',
+#         'USER': 'postgres',
+#         'PASSWORD': '2222222',
+#         'HOST': 'localhost',
+#         'PORT' : '5432'
+
+#     }
+# }
+
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

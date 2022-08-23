@@ -7,7 +7,7 @@ class NewsFeeds(models.Model):
 	_id = models.AutoField(null=False, primary_key= True)
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	date = models.DateTimeField(auto_now_add=True)
-	photo = models.FileField( upload_to='photos', null = True)
+
 
 
 	def __str__(self):
