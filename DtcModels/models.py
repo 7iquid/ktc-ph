@@ -8,4 +8,5 @@ class Photo(models.Model):
 	photo = models.ImageField(default="profile1.png",null=True, upload_to='thumbnail')
 
 	def __str__(self):
-		return self._id
+		return self.name
+		
