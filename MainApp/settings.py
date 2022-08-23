@@ -204,7 +204,8 @@ USE_TZ = True
 
 # For dropbox django dafault local storage
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
-DROPBOX_ROOT_PATH  = 'DTC'
+# DROPBOX_ROOT_PATH  = 'DTC'
+DROPBOX_ROOT_PATH = MEDIA_ROOT
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 DROPBOX_OAUTH2_TOKEN  = 'sl.BNkQw8cnCQrbNNskzG7ivnXid7zjzhBFN2fEmjUDlkm5gyKrT1MZ5ZwDYabZceizdpraQdthgcU5KFi3AZNFebv0LxN2LQnzEAG5PEZY8tXftv4FE4p1bh_xrg1coDzoeigZqOwe'
 DROPBOX_ACCESS_TOKEN = DROPBOX_OAUTH2_TOKEN
