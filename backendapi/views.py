@@ -3,10 +3,10 @@ from rest_framework.decorators import api_view
 from rest_framework import routers, serializers, viewsets
 
 #serializer
-from .serializer import PhotoSerializer, UsersSerializer, NewsFeedsSerializer
+from .serializer import  UsersSerializer, NewsFeedsSerializer
 
 #model
-from DtcModels.models import Photo,NewsFeeds
+from .models import NewsFeeds
 from django.contrib.auth.models import User
 
 

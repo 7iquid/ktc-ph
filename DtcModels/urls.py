@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import news_feeds, home
+from .views import  home
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from django.conf import settings
@@ -19,7 +19,6 @@ router.register(r'users', UserViewSet)
 
 
 urlpatterns = [
-	path('newsfeeds', news_feeds),
     path('<pk>', home),
     path('', home),
 ]

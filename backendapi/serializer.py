@@ -1,14 +1,8 @@
 from rest_framework import serializers
 
 #models
-from DtcModels.models import Photo, NewsFeeds
+from .models import NewsFeeds
 from django.contrib.auth.models import User
-
-class PhotoSerializer(serializers.ModelSerializer):
-	class Meta:
-		model = Photo
-		fields = '__all__'
-		# fields = ('photo')
 
 
 class UsersSerializer(serializers.ModelSerializer):
