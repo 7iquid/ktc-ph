@@ -7,8 +7,8 @@ class NewsFeeds(models.Model):
 	_id = models.AutoField(null=False, primary_key= True)
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	date = models.DateTimeField(auto_now_add=True)
-	photo = models.FileField( upload_to='photos', null = True)
+	category = models.CharField(max_length=200, null=False,default=None )
+	photo = models.ImageField(null=False, upload_to='newsfeeds', default=None)
 
-
-	def __str__(self):
-		return self._id
+	def __int__(self):
+		return self.user

@@ -20,6 +20,7 @@ from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_URL = '/static/'
@@ -132,11 +133,27 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'MY2IjKFJ8F8oxBSyXbyu',
-        'HOST': 'containers-us-west-65.railway.app',
-        'PORT': '6537',
+        'PASSWORD': '429S0wzaTU8yIWue7oac',
+        'HOST': 'containers-us-west-71.railway.app',
+        'PORT': '5483',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'DTC',
+#         'USER': 'postgres',
+#         'PASSWORD': '2222222',
+#         'HOST': 'localhost',
+#         'PORT' : '5432'
+
+#     }
+# }
+
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -187,7 +204,8 @@ USE_TZ = True
 
 # For dropbox django dafault local storage
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
-DROPBOX_ROOT_PATH  = 'DTC'
+# DROPBOX_ROOT_PATH  = 'DTC'
+DROPBOX_ROOT_PATH = 'media'
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 DROPBOX_OAUTH2_TOKEN  = 'sl.BNkQw8cnCQrbNNskzG7ivnXid7zjzhBFN2fEmjUDlkm5gyKrT1MZ5ZwDYabZceizdpraQdthgcU5KFi3AZNFebv0LxN2LQnzEAG5PEZY8tXftv4FE4p1bh_xrg1coDzoeigZqOwe'
 DROPBOX_ACCESS_TOKEN = DROPBOX_OAUTH2_TOKEN

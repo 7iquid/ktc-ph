@@ -50,6 +50,7 @@ git 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
 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
 
 
+<!-- git command -->
 cd to .git
 ## git fetch "https://github.com/7iquid/Facemask.git"
 ## git branch
@@ -67,4 +68,10 @@ set user
 ## git config --local -l //check
 
 js refresh cache file
-## python manage.py collectstatic --noinput --clear
+## python manage.py collectstatic 
+
+
+
+<!-- heroku cli -->
+## heroku apps
+## ktc-ph-api

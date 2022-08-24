@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from DtcModels.models import Photo
+
 # from django.core.files.storage import FileSystemStorage
 # from django.conf.urls.static import static
 # from django.conf import settings
@@ -15,7 +15,6 @@ class DtcAccount(models.Model):
     name = models.CharField(max_length=200, null=True, blank=True)
     phone = models.CharField(max_length=200, null=True, blank=True)
     email = models.CharField(max_length=200, null=True, blank=True)
-    profile_pic = models.OneToOneField(Photo, on_delete=models.CASCADE, blank=True,null=True)
     date_created = models.DateTimeField(auto_now_add=True ,null=True, blank=True)
 
     def __str__(self):
