@@ -10,5 +10,5 @@ class NewsFeeds(models.Model):
 	category = models.CharField(max_length=200, null=False,default=None )
 	photo = models.ImageField(null=False, upload_to='newsfeeds', default=None)
 
-	def __str__(self):
+	def __int__(self):
 		return self.user
