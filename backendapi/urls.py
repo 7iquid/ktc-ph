@@ -1,11 +1,10 @@
 from django.urls import path, include
-from .views import  getData, UsersViewSet ,NewsFeedsViewSet
+from .views import  getData ,NewsFeedsViewSet
 from django.contrib.auth.models import User
 from rest_framework import routers
 
 
 router = routers.DefaultRouter()
-router.register('Users', viewset=UsersViewSet)
 router.register('NewsFeeds', viewset=NewsFeedsViewSet)
 
 urlpatterns = [

@@ -10,6 +10,9 @@ from DtcModels.models import Photo,NewsFeeds
 from django.contrib.auth.models import User
 
 
+
+
+
 @api_view(['GET','POST'])
 def getData(request):
 	item = Photo.objects.all()
@@ -17,10 +20,34 @@ def getData(request):
 	return Response(serializer.data) 
 
 
-class UsersViewSet(viewsets.ModelViewSet):
-    serializer_class = UsersSerializer
-    queryset = User.objects.all()
 
-class NewsFeedsViewSet(viewsets.ModelViewSet):
+
+class NewsFeedsViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    A simple ViewSet for viewing accounts.
+    """
     serializer_class = NewsFeedsSerializer
-    queryset = NewsFeeds.objects.all()    
+    queryset = NewsFeeds.objects.all()
+   
+
+
+
+# class NewsFeedsViewSet(viewsets.ModelViewSet):
+#     serializer_class = NewsFeedsSerializer
+#     queryset = NewsFeeds.objects.all()    
+
+
+# class UsersViewSet(viewsets.ViewSet):
+#     """
+#     A simple ViewSet for listing or retrieving users.
+#     """
+#     def list(self, request):
+#         queryset = User.objects.all()
+#         serializer = UsersSerializer(queryset, many=True)
+#         return Response(serializer.data)
+
+#     def retrieve(self, request, pk=None):
+#         queryset = User.objects.all()
+#         user = get_object_or_404(queryset, pk=pk)
+#         serializer = UsersSerializer(user)
+#         return Response(serializer.data)
