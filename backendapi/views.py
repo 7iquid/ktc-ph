@@ -14,9 +14,9 @@ from django.contrib.auth.models import User
 
 
 @api_view(['GET','POST'])
-def getData(request):
-	item = Photo.objects.all()
-	serializer = PhotoSerializer(item, many=True)
+def NewsFeedsView(request):
+	item = NewsFeeds.objects.all()
+	serializer = NewsFeedsSerializer(item, many=True)
 	return Response(serializer.data) 
 
 
