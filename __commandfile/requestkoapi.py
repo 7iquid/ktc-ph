@@ -2,7 +2,7 @@ import requests
 import json
 
 # url = 'http://127.0.0.1:8000/Accounts/register'
-url = 'https://ktc-ph-ui.herokuapp.com/'
+url = 'https://ktc-ph-api.herokuapp.com/api/'
 # Headers ={
 #     "Authorization": "Basic dzVsYnQ1cGM0MmpybTIwOmJoZHh0dTJ2bTBzcXJnbg== ",
 #     "Content-Type": "application/json"
@@ -15,5 +15,6 @@ url = 'https://ktc-ph-ui.herokuapp.com/'
 # }
 
 response = requests.get(url )
-print(response.text)
+# data = response.json()
+print(json.dumps(response.json(), indent=2))
 
