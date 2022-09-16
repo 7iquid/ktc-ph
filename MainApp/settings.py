@@ -64,6 +64,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    #restFrameworks
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
@@ -80,6 +82,7 @@ INSTALLED_APPS = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -117,40 +120,27 @@ TEMPLATES = [
 WSGI_APPLICATION = 'MainApp.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '429S0wzaTU8yIWue7oac',
-        'HOST': 'containers-us-west-71.railway.app',
-        'PORT': '5483',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
 # DATABASES = {
 #     'default': {
+#         #'ENGINE': 'django.db.backends.sqlite3',
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'DTC',
+#         'NAME': 'railway',
 #         'USER': 'postgres',
-#         'PASSWORD': '2222222',
-#         'HOST': 'localhost',
-#         'PORT' : '5432'
-
+#         'PASSWORD': '429S0wzaTU8yIWue7oac',
+#         'HOST': 'containers-us-west-71.railway.app',
+#         'PORT': '5483',
 #     }
 # }
 
+
+AUTH_USER_MODEL = 'Accounts.CustomUser'
 
 
 

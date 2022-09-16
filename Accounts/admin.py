@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import DtcAccount
+from .models import CustomUser
 
-admin.site.register(DtcAccount)
+admin.site.register(CustomUser)
 # admin.site.register(Console)

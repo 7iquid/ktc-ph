@@ -1,24 +1,24 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
+from django.contrib.auth import get_user_model
+# User = get_user_model()
 
-# from django.core.files.storage import FileSystemStorage
-# from django.conf.urls.static import static
-# from django.conf import settings
-# from django_dropbox_storage.storage import DropboxStorage
-# from backendapi.updown import download , list_folder
-# import dropbox
-# DROPBOX_STORAGE = DropboxStorage()
-# TOKEN = settings.DROPBOX_OAUTH2_TOKEN
-# dbx = dropbox.Dropbox(settings.DROPBOX_OAUTH2_TOKEN)
-class DtcAccount(models.Model):
-    user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200, null=True, blank=True)
-    phone = models.CharField(max_length=200, null=True, blank=True)
-    email = models.CharField(max_length=200, null=True, blank=True)
-    date_created = models.DateTimeField(auto_now_add=True ,null=True, blank=True)
+
+class CustomUser(AbstractUser):
+    photo = models.ImageField(upload_to='profilePick',null=False, default='profilePick/empty.png')
 
     def __str__(self):
-        return self.name
+        return self.username
+
+# class DtcAccount(models.Model):
+#     # user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
+#     name = models.CharField(max_length=200, null=True, blank=True)
+#     phone = models.CharField(max_length=200, null=True, blank=True)
+#     email = models.CharField(max_length=200, null=True, blank=True)
+#     date_created = models.DateTimeField(auto_now_add=True ,null=True, blank=True)
+
+#     def __str__(self):
+#         return self.name
 # class DtcAccount(models.Model):
 #     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
 #     name = models.CharField(,)

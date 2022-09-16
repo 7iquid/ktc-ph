@@ -1,6 +1,6 @@
 # from django.urls import path, include
-from .views import register_request, MyTokenObtainPairView
-from rest_framework_simplejwt.views import ( TokenObtainPairView,TokenRefreshView,)
+from .views import  MyTokenObtainPairView
+from rest_framework_simplejwt.views import ( TokenVerifyView, TokenObtainPairView,TokenRefreshView,)
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
@@ -14,10 +14,10 @@ app_name = "main"
 
 urlpatterns = [
     # path("", views.homepage, name="homepage"),
-    path("register", register_request, name="register"),
+    # path("register", register_request, name="register"),
     path('token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
+    path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
 ]
 
 # if settings.DEBUG:

@@ -7,7 +7,6 @@ from .serializer import  UsersSerializer, NewsFeedsSerializer
 
 #model
 from .models import NewsFeeds
-from django.contrib.auth.models import User
 
 
 

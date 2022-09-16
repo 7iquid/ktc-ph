@@ -1,9 +1,11 @@
 from django.urls import path, include
 from .views import  home
-from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import get_user_model
+User = get_user_model()
+
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
