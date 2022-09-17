@@ -120,24 +120,24 @@ TEMPLATES = [
 WSGI_APPLICATION = 'MainApp.wsgi.application'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         #'ENGINE': 'django.db.backends.sqlite3',
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': '429S0wzaTU8yIWue7oac',
-#         'HOST': 'containers-us-west-71.railway.app',
-#         'PORT': '5483',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'xK47z9Q22rRzpNJsIvs3',
+        'HOST': 'containers-us-west-77.railway.app',
+        'PORT': '6404',
+    }
+}
 
 
 AUTH_USER_MODEL = 'Accounts.CustomUser'

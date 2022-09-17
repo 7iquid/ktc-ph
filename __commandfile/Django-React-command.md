@@ -34,6 +34,7 @@ djano command
 ## python manage.py  migrate api 0010
 ## python manage.py  showmigrations api
 ## python manage.py  migrate api zero
+## python manage.py migrate --fake
 
 node react command
 ## npm install @craco/craco --save
