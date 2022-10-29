@@ -126,7 +126,6 @@ WSGI_APPLICATION = 'MainApp.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-print(os.environ.get("PYTHON_ENV"),"<<<<<<<<<<<<<<<<<,")
 if os.environ.get("PYTHON_ENV"):
     DATABASES = {
         'default': {
